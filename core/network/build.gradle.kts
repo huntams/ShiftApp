@@ -2,6 +2,7 @@ plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
     id ("kotlin-kapt")
+    id ("com.google.dagger.hilt.android")
     id ("androidx.navigation.safeargs")
     id ("kotlin-parcelize")
     id ("org.jetbrains.kotlin.plugin.serialization")
@@ -43,7 +44,6 @@ android {
 }
 
 dependencies {
-
     implementation ("androidx.paging:paging-runtime-ktx:${Versions.paging}")
     implementation(project(":core:model"))
     debugImplementation ("com.github.chuckerteam.chucker:library:${Versions.chucker}")

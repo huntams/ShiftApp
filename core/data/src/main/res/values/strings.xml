@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="internet_connection">No internet connection</string>
+    <string name="reload">Reload</string>
+    <string name="error">error</string>
+</resources>

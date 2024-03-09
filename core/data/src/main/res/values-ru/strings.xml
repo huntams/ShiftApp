@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="internet_connection">Нет интернет соединения</string>
+    <string name="reload">Перезагрузить</string>
+    <string name="error">Ошибка</string>
+</resources>

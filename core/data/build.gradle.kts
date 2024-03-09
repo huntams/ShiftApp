@@ -1,6 +1,11 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id ("kotlin-kapt")
+    id ("com.google.dagger.hilt.android")
+    id ("androidx.navigation.safeargs")
+    id ("kotlin-parcelize")
+    id ("org.jetbrains.kotlin.plugin.serialization")
 }
 
 android {
@@ -30,15 +35,20 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    kapt {
+        correctErrorTypes = true
+    }
 }
 
 dependencies {
+    implementation ("androidx.paging:paging-runtime-ktx:${Versions.paging}")
     implementation(project(":core:model"))
     implementation(project(":core:network"))
-    implementation("androidx.core:core-ktx:1.12.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.11.0")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    implementation("com.google.android.material:material:${Versions.material}")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    implementation ("com.google.dagger:hilt-android:${Versions.hilt}")
+    kapt ("com.google.dagger:hilt-compiler:${Versions.hilt}")
+    testImplementation("junit:junit:${Versions.junit}")
+    androidTestImplementation("androidx.test.ext:junit:${Versions.extJunit}")
+    androidTestImplementation("androidx.test.espresso:espresso-core:${Versions.espresso}")
 }

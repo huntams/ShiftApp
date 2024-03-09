@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_details"
+    app:startDestination="@id/detailsFragment">
+
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.huntams.userdetails.DetailsFragment"
+        android:label="DetailsFragment">
+
+
+        <argument
+            android:name="seed"
+            app:argType="string" />
+        <deepLink app:uri="features://details/{seed}" />
+
+    </fragment>
+</navigation>

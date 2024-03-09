@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="id_profile">ID: %s</string>
+    <string name="test_string">etwatwatwtawatweeeeeeeeeeeeeeeeeeeee</string>
+    <string name="choice_email">Выберите Email клиент:</string>
+    <string name="choice_map">Выберите клиент:</string>
+    <string name="age">Возраст: %1$s \n Дата регистрации: %2$s</string>
+    <string name="phone_cell">Телефон: %1$s;  Домашний телефон: %2$s</string>
+</resources>

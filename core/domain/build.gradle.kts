@@ -2,6 +2,7 @@ plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
     id ("kotlin-kapt")
+    id ("com.google.dagger.hilt.android")
     id ("androidx.navigation.safeargs")
     id ("kotlin-parcelize")
     id ("org.jetbrains.kotlin.plugin.serialization")
@@ -40,11 +41,10 @@ android {
 }
 
 dependencies {
+    implementation(project(":core:network"))
     implementation(project(":core:model"))
     implementation(project(":core:data"))
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
-    implementation(project(":core:model"))
-    implementation(project(":core:data"))
     implementation ("com.google.dagger:hilt-android:${Versions.hilt}")
     kapt ("com.google.dagger:hilt-compiler:${Versions.hilt}")
     testImplementation("junit:junit:${Versions.junit}")

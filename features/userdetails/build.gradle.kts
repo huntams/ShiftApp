@@ -2,6 +2,7 @@ plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
     id ("kotlin-kapt")
+    id ("com.google.dagger.hilt.android")
     id ("androidx.navigation.safeargs")
     id ("kotlin-parcelize")
     id ("org.jetbrains.kotlin.plugin.serialization")
@@ -15,7 +16,6 @@ android {
         minSdk = 24
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -47,6 +47,7 @@ dependencies {
     implementation(project(":core:data"))
     implementation(project(":core:model"))
     implementation(project(":core:network"))
+
     implementation ("com.google.dagger:hilt-android:${Versions.hilt}")
     kapt ("com.google.dagger:hilt-compiler:${Versions.hilt}")
     implementation ("androidx.paging:paging-runtime-ktx:${Versions.paging}")
@@ -61,6 +62,9 @@ dependencies {
     implementation ("com.github.kirich1409:viewbindingpropertydelegate-noreflection:${Versions.viewBinding}")
     implementation ("androidx.navigation:navigation-fragment-ktx:${Versions.navVersion}")
     implementation ("androidx.navigation:navigation-ui-ktx:${Versions.navVersion}")
+    implementation ("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:${Versions.retrofitSerialization}")
+    implementation ("org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.kotlinSerialization}")
+    implementation ("com.squareup.retrofit2:retrofit:${Versions.retrofit}")
     implementation("androidx.core:core-ktx:${Versions.coreKtx}")
     implementation("androidx.appcompat:appcompat:${Versions.appcompat}")
     implementation("com.google.android.material:material:${Versions.material}")
